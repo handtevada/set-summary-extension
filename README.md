@@ -43,3 +43,11 @@
 3. Make sure to open developer mode
 4. Click load unpacked and choose folder dist
 5. Done.
+
+## Example
+
+![Screenshot](/Screenshot.png)
+
+## Others
+
+Welcome to contribute. Thank you very much.
