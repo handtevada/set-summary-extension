@@ -6,11 +6,15 @@ const Information = ({ symbol }) => {
 
   if (!data) return 'loading';
 
+  const handleImageError = (event) => {
+    event.currentTarget.style = 'display: none';
+  };
+
   return (
     <div className="sse-section-container">
       <div className="sse-info-title-container">
         <h2>{data?.name}</h2>
-        {data?.logoUrl && <img src={data?.logoUrl} width={100} height={100} />}
+        <img src={data?.logoUrl} width={100} height={100} onError={handleImageError} />
       </div>
       <div className="sse-info-content-container">
         <h3>ลักษณะธุรกิจ : {data?.sectorName}</h3>
