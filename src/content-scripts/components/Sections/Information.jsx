@@ -10,7 +10,7 @@ const Information = ({ symbol }) => {
     <div className="sse-section-container">
       <div className="sse-info-title-container">
         <h2>{data?.name}</h2>
-        <img src={data?.logoUrl} width={100} height={100} />
+        {data?.logoUrl && <img src={data?.logoUrl} width={100} height={100} />}
       </div>
       <div className="sse-info-content-container">
         <h3>ลักษณะธุรกิจ : {data?.sectorName}</h3>
