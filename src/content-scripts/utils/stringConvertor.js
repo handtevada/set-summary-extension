@@ -4,5 +4,6 @@ const options = {
 };
 
 export const getNumberFormat = (value) => {
-  return value.toLocaleString('en', options);
+  if (value) value.toLocaleString('en', options);
+  return '-';
 };
