@@ -121,3 +121,8 @@
     border-bottom: 1px #72767d dotted;
     cursor: pointer;
 }
+
+/* Loading */
+.sse-loading {
+    padding: 10px;
+}

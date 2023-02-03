@@ -2,10 +2,12 @@ import useData from '../../hooks/useData';
 import { SET_FINANCE } from '../../constants/url';
 import { getNumberFormat } from '../../utils/stringConvertor';
 
+import Loading from '../Loading';
+
 const FinanceAccount = ({ symbol }) => {
   const { data } = useData(SET_FINANCE(symbol));
 
-  if (!data) return 'loading';
+  if (!data) return <Loading />;
 
   const dataSwap = {
     thead: data.map((item) => {

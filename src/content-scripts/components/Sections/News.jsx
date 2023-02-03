@@ -4,6 +4,8 @@ import { th } from 'date-fns/locale';
 import useData from '../../hooks/useData';
 import { SET_NEWS } from '../../constants/url';
 
+import Loading from '../Loading';
+
 const NewsItem = ({ list }) => {
   return list?.slice(0, 5).map((item) => {
     return (
@@ -22,7 +24,7 @@ const News = ({ symbol }) => {
     SET_NEWS(symbol, format(fromDate, 'dd/MM/yyyy'), format(today, 'dd/MM/yyyy')),
   );
 
-  if (!data) return 'loading';
+  if (!data) return <Loading />;
 
   return (
     <div className="sse-section-container">

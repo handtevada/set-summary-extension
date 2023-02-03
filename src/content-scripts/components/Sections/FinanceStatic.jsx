@@ -5,10 +5,12 @@ import useData from '../../hooks/useData';
 import { SET_FINANCE_STATIC } from '../../constants/url';
 import { getNumberFormat } from '../../utils/stringConvertor';
 
+import Loading from '../Loading';
+
 const FinanceStatic = ({ symbol }) => {
   const { data } = useData(SET_FINANCE_STATIC(symbol));
 
-  if (!data) return 'loading';
+  if (!data) return <Loading />;
 
   const dataSwap = {
     thead: data.map((item) => {

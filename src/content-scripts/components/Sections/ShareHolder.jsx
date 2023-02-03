@@ -2,10 +2,12 @@ import useData from '../../hooks/useData';
 import { SET_SHARE_HOLDER } from '../../constants/url';
 import { getNumberFormat } from '../../utils/stringConvertor';
 
+import Loading from '../Loading';
+
 const ShareHolder = ({ symbol }) => {
   const { data } = useData(SET_SHARE_HOLDER(symbol));
 
-  if (!data) return 'loading';
+  if (!data) return <Loading />;
 
   return (
     <div className="sse-section-container">

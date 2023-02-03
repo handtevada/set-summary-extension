@@ -1,10 +1,12 @@
 import useData from '../../hooks/useData';
 import { SET_PROFILE } from '../../constants/url';
 
+import Loading from '../Loading';
+
 const Information = ({ symbol }) => {
   const { data } = useData(SET_PROFILE(symbol));
 
-  if (!data) return 'loading';
+  if (!data) return <Loading />;
 
   const handleImageError = (event) => {
     event.currentTarget.style = 'display: none';
