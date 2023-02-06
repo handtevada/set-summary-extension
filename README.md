@@ -40,9 +40,10 @@
 
 1. Clone or download this repository
 2. Go to Chrome browser and choose More Tools -> Extensions
-3. Make sure to open developer mode
-4. Click load unpacked and choose folder dist
-5. Done.
+3. Switch on developer mode
+4. Click load unpacked button and choose folder dist
+5. In set website when you search stock will show button SSE, Click it.
+6. Boom.
 
 ## Example
 
